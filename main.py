@@ -2,7 +2,7 @@ import time
 import json
 from pathlib import Path
 from datetime import datetime
-from services.sms import DemoSMSService
+from services.sms import DemoSMSService, run_demo_queue
 from updater import check_update
 
 VERSION = "2.2"
@@ -77,7 +77,8 @@ def main():
         print("3. تست سرویس پیامک آزمایشی")
         print("4. بررسی به‌روزرسانی")
         print("5. اطلاعات برنامه")
-        print("6. خروج")
+        print("6. اجرای صف آزمایشی")
+        print("7. خروج")
 
         choice = input("انتخاب: ").strip()
 
@@ -94,6 +95,12 @@ def main():
             print("این نسخه هیچ پیامک واقعی ارسال نمی‌کند.")
             print("وضعیت: سرویس پیامکی آزمایشی")
         elif choice == "6":
+            run_demo_queue([
+                ("Ali", "پیام آزمایشی ۱"),
+                ("Ali", "پیام آزمایشی ۲"),
+                ("Ali", "پیام آزمایشی ۳"),
+            ], delay=1)
+        elif choice == "7":
             print("خدانگهدار!")
             break
         else:
