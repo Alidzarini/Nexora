@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 
-VERSION = "2.0"
+VERSION = "2.1"
 LOG_FILE = Path("history.json")
 
 
