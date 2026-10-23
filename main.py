@@ -2,6 +2,7 @@ import time
 import json
 from pathlib import Path
 from datetime import datetime
+from services.sms import DemoSMSService
 
 VERSION = "2.1"
 LOG_FILE = Path("history.json")
@@ -71,8 +72,9 @@ def main():
         print(f"\n===== Nexora v{VERSION} =====")
         print("1. شروع شبیه‌سازی")
         print("2. نمایش سابقه")
-        print("3. اطلاعات برنامه")
-        print("4. خروج")
+        print("3. تست سرویس پیامک آزمایشی")
+        print("4. اطلاعات برنامه")
+        print("5. خروج")
 
         choice = input("انتخاب: ").strip()
 
@@ -81,9 +83,11 @@ def main():
         elif choice == "2":
             show_history()
         elif choice == "3":
-            print("Nexora نسخه آزمایشی 2.0")
-            print("این نسخه هیچ پیامک واقعی ارسال نمی‌کند.")
+            DemoSMSService().send("test", "پیام آزمایشی")
         elif choice == "4":
+            print("Nexora نسخه آزمایشی 2.1")
+            print("این نسخه هیچ پیامک واقعی ارسال نمی‌کند.")
+        elif choice == "5":
             print("خدانگهدار!")
             break
         else:
