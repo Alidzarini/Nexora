@@ -39,7 +39,8 @@ def simulate():
         history.append({
             "date": datetime.now().isoformat(timespec="seconds"),
             "count": count,
-            "delay": delay
+            "delay": delay,
+            "result": "completed"
         })
 
         LOG_FILE.write_text(
@@ -89,8 +90,9 @@ def main():
         elif choice == "4":
             check_update()
         elif choice == "5":
-            print("Nexora نسخه آزمایشی 2.1")
+            print("Nexora نسخه آزمایشی 2.2")
             print("این نسخه هیچ پیامک واقعی ارسال نمی‌کند.")
+            print("وضعیت: سرویس پیامکی آزمایشی")
         elif choice == "6":
             print("خدانگهدار!")
             break
