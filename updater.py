@@ -2,7 +2,7 @@ import json
 import urllib.request
 from pathlib import Path
 
-CURRENT_VERSION = "2.0"
+CURRENT_VERSION = "2.1"
 
 # بعداً آدرس فایل version.json مخزن خودمان را اینجا قرار می‌دهیم.
 VERSION_URL = "https://raw.githubusercontent.com/Alidzarini/Nexora/main/version.json"
