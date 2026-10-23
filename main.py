@@ -68,7 +68,7 @@ def show_history():
 
 def main():
     while True:
-        print(f"\n===== AliTools v{VERSION} =====")
+        print(f"\n===== Nexora v{VERSION} =====")
         print("1. شروع شبیه‌سازی")
         print("2. نمایش سابقه")
         print("3. اطلاعات برنامه")
@@ -81,7 +81,7 @@ def main():
         elif choice == "2":
             show_history()
         elif choice == "3":
-            print("AliTools نسخه آزمایشی 2.0")
+            print("Nexora نسخه آزمایشی 2.0")
             print("این نسخه هیچ پیامک واقعی ارسال نمی‌کند.")
         elif choice == "4":
             print("خدانگهدار!")

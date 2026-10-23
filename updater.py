@@ -10,14 +10,14 @@ VERSION_URL = ""
 
 def check_update():
     if not VERSION_URL:
-        print("هنوز مخزن آنلاین برای AliTools تنظیم نشده است.")
+        print("هنوز مخزن آنلاین برای Nexora تنظیم نشده است.")
         print(f"نسخه نصب‌شده: {CURRENT_VERSION}")
         return
 
     try:
         request = urllib.request.Request(
             VERSION_URL,
-            headers={"User-Agent": "AliTools-Updater"}
+            headers={"User-Agent": "Nexora-Updater"}
         )
 
         with urllib.request.urlopen(request, timeout=10) as response:
