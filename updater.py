@@ -33,8 +33,11 @@ def check_update():
         print(f"نسخه نصب‌شده: {current}")
         print(f"آخرین نسخه: {latest}")
 
-        if not latest or latest == current:
-            print("برنامه به‌روز است یا نسخه آنلاین معتبر نیست.")
+        if not latest:
+            print("نسخه آنلاین معتبر نیست.")
+            return
+        if latest == current:
+            print("برنامه به‌روز است.")
             return
 
         answer = input("نسخه جدید دریافت شود؟ (y/n): ").strip().lower()
