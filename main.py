@@ -5,7 +5,7 @@ from datetime import datetime
 from services.sms import DemoSMSService
 from updater import check_update
 
-VERSION = "2.1"
+VERSION = "2.2"
 LOG_FILE = Path("history.json")
 
 
